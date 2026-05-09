@@ -1,8 +1,6 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 function Products() {
-  const navigate = useNavigate();
   const [filterCategory, setFilterCategory] = useState('all');
   const [filterBrand, setFilterBrand] = useState('all');
   const [filterPrice, setFilterPrice] = useState('all');
@@ -12,7 +10,7 @@ function Products() {
     alert(message);
   };
 
-  const addToCart = (name: string, price: number, id: number) => {
+  const addToCart = (name: string) => {
     showToast(`${name} added to cart!`);
   };
 
@@ -132,7 +130,7 @@ function Products() {
             <p>Intel i7-13700H · 16GB · 512GB NVMe</p>
             <div className="card-footer-row">
               <span className="price-tag">Rs. 289,000</span>
-              <button className="sm-button" onClick={() => addToCart('Dell XPS 15', 289000, 1)}>
+              <button className="sm-button" onClick={() => addToCart('Dell XPS 15')}>
                 Add to Cart
               </button>
             </div>
@@ -155,7 +153,7 @@ function Products() {
             <p>Intel i9 · 32GB · 1TB NVMe</p>
             <div className="card-footer-row">
               <span className="price-tag">Rs. 349,000</span>
-              <button className="sm-button" onClick={() => addToCart('HP Spectre x360', 349000, 2)}>
+              <button className="sm-button" onClick={() => addToCart('HP Spectre x360')}>
                 Add to Cart
               </button>
             </div>
@@ -178,7 +176,7 @@ function Products() {
             <p>AMD Ryzen 9 · 32GB · 1TB · 4K OLED</p>
             <div className="card-footer-row">
               <span className="price-tag">Rs. 420,000</span>
-              <button className="sm-button" onClick={() => addToCart('ThinkPad X1 Carbon', 420000, 3)}>
+              <button className="sm-button" onClick={() => addToCart('ThinkPad X1 Carbon')}>
                 Add to Cart
               </button>
             </div>
@@ -201,7 +199,7 @@ function Products() {
             <p>Ryzen 9 · RTX 4080 · 32GB · 2TB</p>
             <div className="card-footer-row">
               <span className="price-tag">Rs. 520,000</span>
-              <button className="sm-button" onClick={() => addToCart('ROG Zephyrus G14', 520000, 4)}>
+              <button className="sm-button" onClick={() => addToCart('ROG Zephyrus G14')}>
                 Add to Cart
               </button>
             </div>
@@ -221,7 +219,7 @@ function Products() {
             <p>M3 Pro · 18GB · 512GB SSD</p>
             <div className="card-footer-row">
               <span className="price-tag">Rs. 580,000</span>
-              <button className="sm-button" onClick={() => addToCart('MacBook Pro 14', 580000, 5)}>
+              <button className="sm-button" onClick={() => addToCart('MacBook Pro 14')}>
                 Add to Cart
               </button>
             </div>
@@ -244,7 +242,7 @@ function Products() {
             <p>i9-13980HX · RTX 4090 · 64GB · 4TB</p>
             <div className="card-footer-row">
               <span className="price-tag">Rs. 750,000</span>
-              <button className="sm-button" onClick={() => addToCart('MSI Titan GT77', 750000, 6)}>
+              <button className="sm-button" onClick={() => addToCart('MSI Titan GT77')}>
                 Add to Cart
               </button>
             </div>
@@ -264,7 +262,7 @@ function Products() {
             <p>Intel i5 · 8GB · 512GB SSD</p>
             <div className="card-footer-row">
               <span className="price-tag">Rs. 115,000</span>
-              <button className="sm-button" onClick={() => addToCart('Dell Inspiron 15', 115000, 7)}>
+              <button className="sm-button" onClick={() => addToCart('Dell Inspiron 15')}>
                 Add to Cart
               </button>
             </div>
@@ -284,7 +282,7 @@ function Products() {
             <p>Intel i7 · 16GB · 512GB SSD · 14" FHD</p>
             <div className="card-footer-row">
               <span className="price-tag">Rs. 195,000</span>
-              <button className="sm-button" onClick={() => addToCart('HP EliteBook 840', 195000, 8)}>
+              <button className="sm-button" onClick={() => addToCart('HP EliteBook 840')}>
                 Add to Cart
               </button>
             </div>
